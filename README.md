@@ -4,6 +4,8 @@ A small javafx pdf editor supports
 - [x] Pdf Search
 - [x] Pdf to text
 - [x] Navigate pdf via Outline
+
+Future plan:
 - [ ] Create bookmarks
 - [ ] Export to documents
 - [ ] Export to html
