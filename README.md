@@ -4,6 +4,7 @@ A small javafx pdf editor supports
 - [x] Pdf Search
 - [x] Pdf to text
 - [x] Navigate pdf via Outline
+- [x] Display last open pdfs 
 
 Future plan:
 - [ ] Create bookmarks
