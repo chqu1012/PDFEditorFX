@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<modul:Modul xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modul="http://www.frateranatis.org/fx/emf/modul" 
+	id="de.dc.workbench.fx.ui.pdfx" name="Pdfx">
+
+	  <extensionPoints name="Views">
+	    <units xsi:type="modul:GeneralView"/>
+	    <units xsi:type="modul:GeneralView" type="HISTORY"/>
+	    <units xsi:type="modul:View" id="de.dc.fx.pdf.ui.view.PdfOutline" name="PDF Outline" uri="de.dc.fx.pdf.ui.view.PdfOutline"/>
+	    <units xsi:type="modul:View" id="de.dc.fx.pdf.ui.view.PdfSearchView" name="PDF Search" uri="de.dc.fx.pdf.ui.view.PdfSearchView"/>
+	  </extensionPoints>
+
+	<extensionPoints name="Perspectives">
+	    <units xsi:type="modul:Perspective" 
+	    	id="de.dc.fx.pdf.ui.perspective" name="Pdfx" 
+	    	left="//@extensionPoints.0/@units.1" 
+	    	right="//@extensionPoints.0/@units.3 //@extensionPoints.0/@units.2"
+	    	rightRatio="0.7"
+	    	bottom="//@extensionPoints.0/@units.0" 
+	    	associatedEditors="//@extensionPoints.2/@units.0" hideBottom="true"/>
+	</extensionPoints>
+
+  <extensionPoints name="Editors">
+	<units xsi:type="modul:Editor" id="de.dc.fx.pdf.ui.editor.PdfEmfEditor" name="Pdfx Editor" uri="de.dc.fx.pdf.ui.editor.PdfEmfEditor" extension="pdfx"/>
+	<units xsi:type="modul:Editor" id="de.dc.fx.pdf.ui.editor.PdfEditor" name="Pdf Editor" uri="de.dc.fx.pdf.ui.editor.PdfEditor" extension="pdf"/>
+  </extensionPoints>
+  
+  <extensionPoints name="Services">
+  </extensionPoints>
+  
+  <extensionPoints name="Commands">
+  </extensionPoints>
+
+</modul:Modul>
