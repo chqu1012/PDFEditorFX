@@ -1,18 +1,19 @@
 # PDFEditorFX
 A small javafx pdf editor supports
 
-- [/] Pdf Search
-- [/] Pdf to text
-- [/] Navigate pdf via Outline
-- [x] Create bookmarks
-- [x] Export to documents
-- [x] Export to html
-- [x] Export to image
-- [x] Render latex files
-- [x] Render restructured files
-- [x] Presentation mode
-- [x] Drawing shapes in pdf
-- [x] Highlighting pdfs
+- [x] Pdf Search
+- [x] Pdf to text
+- [x] Navigate pdf via Outline
+- [ ] Create bookmarks
+- [ ] Export to documents
+- [ ] Export to html
+- [ ] Export to image
+- [ ] Render latex files
+- [ ] Render restructured files
+- [ ] Render markdown files
+- [ ] Presentation mode
+- [ ] Drawing shapes in pdf
+- [ ] Highlighting pdfs
 
 ![Application](https://github.com/chqu1012/PDFEditorFX/blob/main/PdfEditorFX/resources/01_pdfeditor.PNG)  
 
