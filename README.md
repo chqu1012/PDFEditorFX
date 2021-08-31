@@ -17,6 +17,7 @@ Future plan:
 - [ ] Presentation mode
 - [ ] Drawing shapes in pdf
 - [ ] Highlighting pdfs
+- [ ] Comments in pdfs
 
 ![Application](https://github.com/chqu1012/PDFEditorFX/blob/main/PdfEditorFX/resources/01_pdfeditor.PNG)  
 
