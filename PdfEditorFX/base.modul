@@ -6,8 +6,8 @@
 	  <extensionPoints name="Views">
 	    <units xsi:type="modul:GeneralView"/>
 	    <units xsi:type="modul:GeneralView" type="HISTORY"/>
-	    <units xsi:type="modul:View" id="de.dc.fx.pdf.ui.view.PdfOutline" name="PDF Outline" uri="de.dc.fx.pdf.ui.view.PdfOutline"/>
-	    <units xsi:type="modul:View" id="de.dc.fx.pdf.ui.view.PdfSearchView" name="PDF Search" uri="de.dc.fx.pdf.ui.view.PdfSearchView"/>
+	    <units xsi:type="modul:View" id="de.dc.fx.pdf.ui.view.PdfOutline" name="Outline" uri="de.dc.fx.pdf.ui.view.PdfOutline"/>
+	    <units xsi:type="modul:View" id="de.dc.fx.pdf.ui.view.PdfSearchView" name="Search" uri="de.dc.fx.pdf.ui.view.PdfSearchView"/>
 	  </extensionPoints>
 
 	<extensionPoints name="Perspectives">

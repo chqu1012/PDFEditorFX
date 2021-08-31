@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EPackage;
 import com.google.common.eventbus.Subscribe;
 import com.google.inject.Inject;
 
+import de.dc.fx.pdf.ui.editor.PdfEditor;
 import de.dc.workbench.fx.core.command.di.EmfFXPlatform;
 import de.dc.workbench.fx.core.event.EventContext;
 import de.dc.workbench.fx.core.event.EventTopic;
@@ -18,7 +19,6 @@ import de.dc.workbench.fx.ui.EmfFilteredTreeView;
 import de.dc.workbench.fx.ui.pdfx.FXOutlineItem;
 import de.dc.workbench.fx.ui.pdfx.PdfxFactory;
 import de.dc.workbench.fx.ui.pdfx.PdfxPackage;
-import de.dc.workbench.fx.ui.pdfx.editor.PdfEditor;
 import de.dc.workbench.fx.ui.pdfx.provider.FXOutlineItemItemProvider;
 import de.dc.workbench.fx.ui.pdfx.provider.PdfxItemProviderAdapterFactory;
 import de.dc.workbench.fx.ui.pdfx.service.IPdfxService;
@@ -46,21 +46,18 @@ public class PdfOutline extends EmfFilteredTreeView<FXOutlineItem>{
 		if (context.match(EventTopic.CURRENT_SELECTED_EDITOR)) {
 			var input = context.getInput();
 			if (input instanceof PdfEditor editor) {
-					Thread thread = new Thread(new Runnable() {
-						@Override
-						public void run() {
-							try {
-								var outline = pdfxService.findOutline(editor.getFile());
-								if(outline==null) {
-									return;
-								}
-								Platform.runLater(() -> {
-									setInput(outline.getItems().get(0));
-									expandAll();										
-								});
-							} catch (IOException e) {
-								e.printStackTrace();
+					Thread thread = new Thread(() -> {
+						try {
+							var outline = pdfxService.findOutline(editor.getFile());
+							if(outline==null) {
+								return;
 							}
+							Platform.runLater(() -> {
+								setInput(outline.getItems().get(0));
+								expandAll();										
+							});
+						} catch (IOException e) {
+							e.printStackTrace();
 						}
 					});
 					thread.setDaemon(true);
